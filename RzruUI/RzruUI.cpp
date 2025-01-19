@@ -468,7 +468,7 @@ void CConfigDialog::OnBnClickedLoad() {
     
     if (LoadConfiguration()) {
         ::MessageBox(NULL, _T("Configuration successfully loaded\nfrom the file `Razeru.json`"), _T("Info"), MB_OK);
-        UpdateAllTabs(); // Уведомление всех вкладок об изменении данных
+        UpdateAllTabs(); // Notify all tabs about data changes
     }
     else {
         ::MessageBox(NULL, _T("Failed to load configuration\nfrom the file`Razeru.json`"), _T("Info"), MB_OK | MB_ICONERROR);
@@ -481,7 +481,7 @@ void CConfigDialog::OnBnClickedApply() {
 
     CConfigDialog::SendUpdateMessage(); // Notify about the update
     AddToStartup(); // Add the application to startup if needed
-    UpdateAllTabs(); // Уведомление всех вкладок об изменении данных
+    UpdateAllTabs(); // Notify all tabs about data changes
 }
 
 
